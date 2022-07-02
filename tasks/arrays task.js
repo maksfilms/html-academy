@@ -4,25 +4,25 @@ let qualified = false;
 let averageBest = 0;
 
 for (let currentIndex = 0; currentIndex <= attempts.length - 1; currentIndex++) {
-  let minValue = attempts[currentIndex];
-    
+    let minValue = attempts[currentIndex];
+
     for (let j = currentIndex + 1; j <= attempts.length - 1; j++) {
         if (minValue > attempts[j]) {
             minValue = attempts[j];
             let swap = attempts[currentIndex];
             attempts[currentIndex] = minValue;
-            attempts[j] = swap; 
-          }
-      }
-  }
-  
-averageBest = ((attempts[attempts.length - 1]) + (attempts[attempts.length - 2]) + (attempts[attempts.length - 3])) / 3; 
+            attempts[j] = swap;
+        }
+    }
+}
+
+averageBest = ((attempts[attempts.length - 1]) + (attempts[attempts.length - 2]) + (attempts[attempts.length - 3])) / 3;
 
 if (averageBest > qualificationDistance) {
     qualified = true;
-  } else {
+} else {
     qualified = false;
-    }
+}
 
 
 /* Техническое задание
