@@ -1,5 +1,5 @@
 let buildComputer = function(memory, display, processor) {
-  
+
   return {
           basicPrice: 5000,
           processor: processor,
